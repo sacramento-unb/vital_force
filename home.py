@@ -4,7 +4,7 @@ import folium
 from streamlit_folium import st_folium
 
 def wide_space_default():
-st.set_page_config(layout=“wide”)
+st.set_page_config(layout="wide")
 
 wide_space_default()
 

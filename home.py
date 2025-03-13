@@ -55,7 +55,7 @@ with col2:
     st.subheader(str(gdf_50l.count().loc['fid']))
 
 with col3:
-    st.header('Destinação de resíduos')
+    st.header('Possui destinação de resíduos')
     gdf_50l = filtered_gdf[(filtered_gdf['destinacao_oleo_queimado'] == 'sim')]
     st.subheader(str(gdf_50l.count().loc['fid']))
 

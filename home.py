@@ -43,7 +43,7 @@ else:
     filtered_gdf = gdf  # Show all if no filters are selected
 
 
-col1,col2,col3 = st.columns(3)
+col1,col2,col3,col4 = st.columns(4)
 
 with col1:
     st.header('Quantidade de fazendas')
@@ -58,6 +58,10 @@ with col3:
     st.header('Destinação de resíduos')
     gdf_50l = filtered_gdf[(filtered_gdf['destinacao_oleo_queimado'] == 'sim')]
     st.subheader(str(gdf_50l.count().loc['fid']))
+
+with col3:
+    st.header('Volume estimado (l)')
+    st.subheader('0')
 
 # Create a Folium map
 m = folium.Map(location=[-14, -54], zoom_start=4, control_scale=True, tiles='Esri World Imagery')
@@ -82,8 +86,9 @@ fazendas_limpo = gpd.GeoDataFrame(filtered_gdf,columns=['geometry'])
 for _, row in filtered_gdf.iterrows():
     folium.CircleMarker(
         location=[row.geometry.y, row.geometry.x],
-        popup=row.get("vol_arm_inferior_50_l", "No id"),
-        tooltip="Volume inferior a 50 litros",
+        #popup=row.get("vol_arm_inferior_50_l", "No id"),
+        popup=('0'),
+        tooltip="Volume estimado",
         radius=5,
         color="blue",
         fill=True,

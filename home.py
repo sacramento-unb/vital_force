@@ -59,7 +59,7 @@ with col3:
     gdf_50l = filtered_gdf[(filtered_gdf['destinacao_oleo_queimado'] == 'sim')]
     st.subheader(str(gdf_50l.count().loc['fid']))
 
-with col3:
+with col4:
     st.header('Volume estimado (l)')
     st.subheader('0')
 

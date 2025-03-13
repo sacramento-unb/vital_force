@@ -92,3 +92,5 @@ m.fit_bounds([[bounds[1],bounds[0]],[bounds[3],bounds[2]]])
 
 # Display the map
 st_Data =st_folium(m, width="100%", key="mapa")
+
+st.write(filtered_gdf)

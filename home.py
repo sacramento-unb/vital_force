@@ -9,7 +9,7 @@ def wide_space_default():
     wide_space_default()
     
     st.sidebar.write('Menu')
-
+wide_space_default()
 # Load data
 @st.cache_resource
 def abrir_tis():

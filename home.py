@@ -3,6 +3,11 @@ import geopandas as gpd
 import folium
 from streamlit_folium import st_folium
 
+def wide_space_default():
+st.set_page_config(layout=“wide”)
+
+wide_space_default()
+
 st.sidebar.write('Menu')
 
 # Load data

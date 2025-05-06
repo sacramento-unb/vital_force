@@ -86,7 +86,7 @@ fazendas_limpo = gpd.GeoDataFrame(filtered_gdf,columns=['geometry'])
 for _, row in filtered_gdf.iterrows():
     folium.CircleMarker(
         location=[row.geometry.y, row.geometry.x],
-        #popup=row.get("vol_arm_inferior_50_l", "No id"),
+        popup=row.get("vol_arm_inferior_50_l", "No id"),
         popup=('0'),
         tooltip="Volume estimado",
         radius=5,
